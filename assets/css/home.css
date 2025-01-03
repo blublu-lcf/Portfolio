@@ -5,7 +5,7 @@
 }
 @font-face {
     font-family: 'American Typewriter'; 
-    src: url('/assets/fonts/americantypewriterbold.ttf') format('truetype'); 
+    src: url('../fonts/americantypewriterbold.ttf') format('truetype'); 
 }
 .navbar{
     position: fixed;

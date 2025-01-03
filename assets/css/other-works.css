@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+@font-face {
+    font-family: 'American Typewriter'; 
+    src: url('/assets/fonts/americantypewriterbold.ttf') format('truetype'); 
+}
+.navbar{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.76);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    z-index: 1001;
+    display: flex;            /* 使用 Flexbox 来排列项目 */
+    justify-content: flex-start;  /* 水平居中 */
+    align-items: center;      /* 垂直居中 */
+
+    justify-content: space-between; /* 在父容器中均匀分布导航项 */
+    padding: 0 2vw; /* 给两边添加一些内边距 */
+}
+.navbar a {
+    text-decoration: none !important;  /* 确保所有链接没有下划线 */
+}
+.nav-item {
+    color: white;             
+    font-size: 1.3vw;          
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;       /* 文字居中对齐 */
+    padding: 14px 20px;       /* 添加内边距，使点击区域更大 */
+    cursor: pointer;         /* 鼠标悬停时显示手指 */   
+    position: absolute; /* 为了可以定位矩形框 */
+    white-space: nowrap;
+}
+.nav-item:hover {
+    color: #7BBDCC;             /* 鼠标悬停时改变文字颜色 */
+}
+
+.nav-item:nth-child(1){
+    left: 2%;
+}
+.nav-item:nth-child(2){
+    left: 53%;
+}
+.nav-item:nth-child(3){
+    left: 70%;
+}
+.nav-item:nth-child(4){
+    left: 78%;
+}
+.nav-item:nth-child(5){
+    left: 86%;
+}
+.nav-item.active {
+    background-color: #2B2B2B;
+    /* border: 2px solid #1E61FF; 设置矩形框 */
+    border-radius: 24.5px; /* 可选：使框角变圆 */
+    padding: 8px 20px; /* 调整内边距，避免框太大 */
+}
+.page1{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page1 h1{
+    position: absolute;
+    color: #7BBDCC;
+    font-family: "American Typewriter";
+    font-size: 8vw;
+    font-style: normal;
+    font-weight: 700;
+    top: 50%;              /* 垂直居中 */
+    left: 50%;             /* 水平居中 */
+    transform: translate(-50%, -50%); /* 平移50%以确保完全居中 */
+    z-index: 3;
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.page1 img{
+    position: absolute;
+    top: 50%;              /* 垂直居中 */
+    left: 50%;             /* 水平居中 */
+    transform: translate(-50%, -50%); /* 平移50%以确保完全居中 */
+    width: 100%;
+    
+}
+.page1 img:nth-child(1){
+    z-index: 1;
+}
+.Graphic_Design{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.Graphic_Design img{
+    position: absolute; 
+    width: 100%;
+}
+.Graphic_Design img:nth-child(1){
+    transform: scale(0.15);
+    top: -90%;              
+    left: -37%;  
+}
+.Graphic_Design img:nth-child(2){
+    transform: scale(0.29);
+    top: -29.5%;              
+    left: -11%;  
+}
+.Graphic_Design img:nth-child(3){
+    transform: scale(0.38);
+    top: -14%;              
+    left: 27%;  
+}
+.Graphic_Design h1{
+    position: absolute;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    z-index: 2;
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.Graphic_Design h1:nth-child(4){
+    color: #7BBDCC;
+    font-size: 2vw;
+    top: 0%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Graphic_Design h1:nth-child(5){
+    color: #ffffff;
+    font-size: 1.5vw;
+    top: 10%; 
+    left: 9%;
+}    
+.Graphic_Design h1:nth-child(6){
+    color: #ffffff;
+    font-size: 1.5vw;
+    top: 10%; 
+    left: 37%;
+}    
+.Graphic_Design h1:nth-child(7){
+    color: #ffffff;
+    font-size: 1.5vw;
+    top: 10%; 
+    left: 75%;
+}    
+.Comic{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.Comic img{
+    position: absolute;
+    transform: scale(0.3);  
+    top: -123%; 
+    left: 0%;
+    width: 100%;
+    /* z-index: 1000; */
+}
+.Comic h1{
+    position: absolute;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    z-index: 2;
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.Comic h1:nth-child(2){
+    color: #7BBDCC;
+    font-size: 2vw;
+    top: -40%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Comic h1:nth-child(3){
+    color: #ffffff;
+    font-size: 1.5vw;
+    top: -32%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Animations{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.Animations img{
+    position: absolute;
+    transform: scale(0.4);   
+    width: 100%;
+}
+.Animations img:nth-child(1){
+    top: -30%;              
+    left: 26%;  
+    z-index: 1000;
+}
+.Animations img:nth-child(2){
+    top: 32%;              
+    left: 26%;  
+    z-index: 1000;
+}
+.Animations img:nth-child(3){
+    top: 94%;              
+    left: 26%;  
+    z-index: 1000;
+}
+.Animations img:nth-child(4){
+    top: 156%;              
+    left: 26%;  
+    z-index: 1000;
+}
+.Animations h1{
+    position: absolute;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    z-index: 2;
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.Animations h1:nth-child(5){
+    color: #7BBDCC;
+    font-size: 2vw;
+    top: -35%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Animations h1:nth-child(6){
+    color: #ffffff;
+    font-size: 1.5vw;
+    top: -27%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Animations h1:nth-child(7){
+    color: #ffffff;
+    font-size: 1.5vw;
+    top: 35%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Animations h1:nth-child(8){
+    color: #ffffff;
+    font-size: 1.5vw;
+    top: 97%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Animations h1:nth-child(9){
+    color: #ffffff;
+    font-size: 1.5vw;
+    top: 159%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Animations video{
+    position: absolute;
+    width: 100%;
+}
+.Animations video:nth-child(10){
+    top: -45%;              
+    left: -20%;  
+    transform: scale(0.5);  
+    z-index: 1000;
+}
+.Animations video:nth-child(11){
+    top: 17%;              
+    left: -20%;  
+    transform: scale(0.5);  
+    z-index: 1000;
+}
+.Animations video:nth-child(12){
+    top: 79%;              
+    left: -20%;  
+    transform: scale(0.5);  
+    z-index: 1000;
+}
+.Animations video:nth-child(13){
+    top: 141%;              
+    left: -20%;  
+    transform: scale(0.5);  
+    z-index: 1000;
+}
+.Moving_Image{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.Moving_Image img{
+    position: absolute;
+    transform: scale(0.4);   
+    width: 100%;
+}
+.Moving_Image img:nth-child(1){
+    top: 130%;              
+    left: 26%;  
+    z-index: 1000;
+}
+.Moving_Image h1{
+    position: absolute;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    z-index: 2;
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.Moving_Image h1:nth-child(2){
+    color: #7BBDCC;
+    font-size: 2vw;
+    top: 125%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Moving_Image h1:nth-child(3){
+    color: #ffffff;
+    font-size: 1.5vw;
+    top: 133%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Moving_Image video{
+    position: absolute;
+    width: 100%;
+}
+.Moving_Image video:nth-child(4){
+    top: 116%;              
+    left: -20%;  
+    transform: scale(0.5);  
+    z-index: 1000;
+}
+.Interaction_Design{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.Interaction_Design img{
+    position: absolute;
+    transform: scale(0.4);   
+    width: 100%;
+}
+.Interaction_Design img:nth-child(1){
+    top: 100%;              
+    left: 26%;  
+    z-index: 1000;
+}
+.Interaction_Design h1{
+    position: absolute;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    z-index: 2;
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.Interaction_Design h1:nth-child(2){
+    color: #7BBDCC;
+    font-size: 2vw;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Interaction_Design h1:nth-child(3){
+    color: #ffffff;
+    font-size: 1.5vw;
+    top: 108%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Interaction_Design video{
+    position: absolute;
+    width: 100%;
+}
+.Interaction_Design video:nth-child(4){
+    top: 90%;              
+    left: -20%;  
+    transform: scale(0.5); 
+    z-index: 1000;
+}
+.Scene_Design{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.Scene_Design img{
+    position: absolute;
+    transform: scale(0.4);   
+    width: 100%;
+}
+.Scene_Design img:nth-child(1){
+    top: 58%;              
+    left: 0%;  
+    z-index: 1000;
+}
+.Scene_Design h1{
+    position: absolute;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    z-index: 2;
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.Scene_Design h1:nth-child(2){
+    color: #7BBDCC;
+    font-size: 2vw;
+    top: 80%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Scene_Design h1:nth-child(3){
+    color: #ffffff;
+    font-size: 1.5vw;
+    top: 88%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Character_Design{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.Character_Design img{
+    position: absolute;
+    transform: scale(0.6);   
+    width: 100%;
+}
+.Character_Design img:nth-child(1){
+    top: 52%;              
+    left: 0%;  
+    z-index: 1000;
+}
+.Character_Design h1{
+    position: absolute;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    z-index: 2;
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.Character_Design h1:nth-child(2){
+    color: #7BBDCC;
+    font-size: 2vw;
+    top: 55%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Character_Design h1:nth-child(3){
+    color: #ffffff;
+    font-size: 1.5vw;
+    top: 63%; 
+    left: 50%;
+    transform: translateX(-50%);
+}   
+.End{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/800;
+}
+.End img{
+    position: absolute;
+    top: 80%;              
+    left: 50%;         
+    transform: translate(-50%,-60%);
+    width: 100%;
+}

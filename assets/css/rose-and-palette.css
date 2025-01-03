@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+@font-face {
+    font-family: 'American Typewriter'; 
+    src: url('/assets/fonts/americantypewriterbold.ttf') format('truetype'); 
+}
+.navbar{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.76);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    z-index: 1001;
+    display: flex;            /* 使用 Flexbox 来排列项目 */
+    justify-content: flex-start;  /* 水平居中 */
+    align-items: center;      /* 垂直居中 */
+
+    justify-content: space-between; /* 在父容器中均匀分布导航项 */
+    padding: 0 2vw; /* 给两边添加一些内边距 */
+}
+.navbar a {
+    text-decoration: none !important;  /* 确保所有链接没有下划线 */
+}
+.nav-item {
+    color: white;             
+    font-size: 1.3vw;          
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;       /* 文字居中对齐 */
+    padding: 14px 20px;       /* 添加内边距，使点击区域更大 */
+    cursor: pointer;         /* 鼠标悬停时显示手指 */   
+    position: absolute; /* 为了可以定位矩形框 */
+    white-space: nowrap;
+}
+.nav-item:hover {
+    color: #7BBDCC;             /* 鼠标悬停时改变文字颜色 */
+}
+
+.nav-item:nth-child(1){
+    left: 2%;
+}
+.nav-item:nth-child(2){
+    left: 53%;
+}
+.nav-item:nth-child(3){
+    left: 70%;
+}
+.nav-item:nth-child(4){
+    left: 78%;
+}
+.nav-item:nth-child(5){
+    left: 86%;
+}
+.nav-item.active {
+    background-color: #2B2B2B;
+    /* border: 2px solid #1E61FF; 设置矩形框 */
+    border-radius: 24.5px; /* 可选：使框角变圆 */
+    padding: 8px 20px; /* 调整内边距，避免框太大 */
+}
+.page1{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page1 img{
+    position: absolute;
+    top: 50%;              /* 垂直居中 */
+    left: 50%;             /* 水平居中 */
+    transform: translate(-50%, -50%); /* 平移50%以确保完全居中 */
+    width: 100%;
+    z-index: 1;
+}
+.Introduction{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.Introduction h1{
+    position: absolute;
+    font-family: "Poppins";
+    font-style: normal;
+    z-index: 2;
+    /* white-space: nowrap;  */
+}
+.Introduction h1:nth-child(1){
+    color: #9543FF;
+    font-weight: 700;
+    font-size: 2vw;
+    top: 0%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Introduction h1:nth-child(2){
+    font-weight: 500;
+    font-size: 1.5vw;
+    top: 10%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%; /* 限制宽度 */
+}    
+.Introduction h1:nth-child(2) .white{
+    color: #F7E6FE;
+}    
+.Introduction h1:nth-child(2) .highlight{
+    color: #B983FF;
+}    
+.Video{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.Video h1{
+    position: absolute;
+    font-family: "Poppins";
+    font-style: normal;
+    z-index: 2;
+}
+.Video h1:nth-child(1){
+    color: #9543FF;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 700;
+    font-size: 2vw;
+    top: -60%; 
+}    
+.Video video{
+    position: absolute;
+    width: 100%;
+    top: -75%;              
+    left: 50%;
+    transform: translateX(-50%) scale(0.5);
+    z-index: 1000;
+}
+.Download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; 
+}
+.Download .download-btn {
+    margin-top: -165vh;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 600;
+    color: #9543FF;
+    background-color: #007bff00;
+    border: 2px solid #9543FF;
+    border-radius: 35px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1000;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+.Download .download-btn:hover {
+    border-color: #B983FF;
+    color: #B983FF;
+}
+.Screenshots{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.Screenshots h1{
+    position: absolute;
+    font-family: "Poppins";
+    font-style: normal;
+    z-index: 2;
+}
+.Screenshots h1:nth-child(1){
+    color: #9543FF;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 700;
+    font-size: 2vw;
+    top: -65%; 
+}    
+.Screenshots img{
+    position: absolute;
+    transform: scale(0.4);   
+    width: 100%;
+}
+.Screenshots img:nth-child(2){
+    top: -85%;              
+    left: 50%;
+    transform: translateX(-50%) scale(0.6);
+    z-index: 1000;
+}
+.Screenshots h1:nth-child(3){
+    color: #D5B4FF;
+    font-style: italic;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+    font-size: 2.3vw;
+    top: 40%; 
+    text-align: center;
+    white-space: nowrap; 
+}    
+.Bottom{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/100;
+}
+.Bottom img{
+    position: absolute;
+    top: 0%;              
+    left: 50%;         
+    transform: translate(-50%,-60%);
+    width: 100%;
+}

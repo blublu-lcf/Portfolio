@@ -1,0 +1,1077 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+@font-face {
+    font-family: 'American Typewriter'; 
+    src: url('/assets/fonts/americantypewriterbold.ttf') format('truetype'); 
+}
+.navbar{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.76);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    z-index: 1001;
+    display: flex;            /* 使用 Flexbox 来排列项目 */
+    justify-content: flex-start;  /* 水平居中 */
+    align-items: center;      /* 垂直居中 */
+
+    justify-content: space-between; /* 在父容器中均匀分布导航项 */
+    padding: 0 2vw; /* 给两边添加一些内边距 */
+}
+.navbar a {
+    text-decoration: none !important;  /* 确保所有链接没有下划线 */
+}
+.nav-item {
+    color: white;             
+    font-size: 1.3vw;          
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;       /* 文字居中对齐 */
+    padding: 14px 20px;       /* 添加内边距，使点击区域更大 */
+    cursor: pointer;         /* 鼠标悬停时显示手指 */   
+    position: absolute; /* 为了可以定位矩形框 */
+    white-space: nowrap;
+}
+.nav-item:hover {
+    color: #1E61FF;             /* 鼠标悬停时改变文字颜色 */
+}
+
+.nav-item:nth-child(1){
+    left: 2%;
+}
+.nav-item:nth-child(2){
+    left: 53%;
+}
+.nav-item:nth-child(3){
+    left: 70%;
+}
+.nav-item:nth-child(4){
+    left: 78%;
+}
+.nav-item:nth-child(5){
+    left: 86%;
+}
+.nav-item.active {
+    background-color: #2B2B2B;
+    /* border: 2px solid #1E61FF; 设置矩形框 */
+    border-radius: 24.5px; /* 可选：使框角变圆 */
+    padding: 8px 20px; /* 调整内边距，避免框太大 */
+}
+.page1{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page1 h1{
+    position: absolute;
+    color: #1E61FF;
+    font-family: "American Typewriter";
+    font-size: 10vw;
+    font-style: normal;
+    font-weight: 700;
+    top: 50%;              /* 垂直居中 */
+    left: 50%;             /* 水平居中 */
+    transform: translate(-50%, -50%); /* 平移50%以确保完全居中 */
+    z-index: 3;
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.page1 img{
+    position: absolute;
+    top: 50%;              /* 垂直居中 */
+    left: 50%;             /* 水平居中 */
+    transform: translate(-50%, -50%); /* 平移50%以确保完全居中 */
+    width: 100%;
+    
+}
+.page1 img:nth-child(1){
+    z-index: 1;
+}
+.page2{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page2 img{
+    position: absolute;
+    width: 100%;
+}
+.page2 img:nth-child(1){
+    top: -35%;
+    left: -26%;
+    transform: scale(0.1);
+    z-index: 1;
+}        
+.page2 img:nth-child(2){
+    top: -9%;
+    left: 22%;
+    transform: scale(0.1);
+    z-index: 1;
+}        
+.page2 img:nth-child(3){
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4); 
+    z-index: 1;
+}        
+.page2 img:nth-child(4){
+    top: 30%; 
+    left: 10%;
+    transform: scale(0.15); 
+    z-index: 1;
+}       
+.page2 h1{
+    position: absolute;
+    color: #000000;
+    font-family: "American Typewriter";
+    font-style: normal;
+    font-weight: 700;
+    z-index: 2;
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.page2 h1:nth-child(5){
+    font-size: 5vw;
+    top: 20%; 
+    left: 23%;
+}       
+.page2 h1:nth-child(6){
+    font-size: 2vw;
+    top: 29%; 
+    left: 69%;
+} 
+.page2 h1:nth-child(7){
+    font-size: 6vw;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+    transition: opacity 2s ease;
+}
+.page2 h1:nth-child(8){
+    font-size: 3vw;
+    top: 75%; 
+    left: 55.5%;
+} 
+.page2 img:nth-child(9){
+    top: -32%;
+    left: -25%;
+    transform: scale(0.1);
+    z-index: 2;
+    animation: shake 4s infinite; /* 添加动画 */
+}   
+@keyframes shake {
+    0% {
+        transform: translateX(0) scale(0.1);  /* 初始位置，保持缩放 */
+    }
+    25% {
+        transform: translateX(-5vm) scale(0.1);  /* 左移 */
+    }
+    50% {
+        transform: translateX(5vw) scale(0.1);  /* 右移 */
+    }
+    75% {
+        transform: translateX(-5vm) scale(0.1);  /* 左移 */
+    }
+    100% {
+        transform: translateX(0) scale(0.1);  /* 恢复到初始位置 */
+    }
+}
+.page2 img:nth-child(10){
+    top: 25%;
+    left: 25%;
+    transform: scale(0.1);
+    z-index: 2;
+}    
+.page3{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page3 img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;  
+}
+.page3 img:nth-child(1){
+    top: 50%; /* 垂直居中 */
+    transform: translate(-50%, -50%); /* 水平和垂直居中 */
+    z-index: 1;
+}   
+.page3 img:nth-child(2){
+    top: -5%;
+    left: 15%;
+    transform: scale(0.06);
+    z-index: 1;
+    animation: move 4s infinite; /* 添加动画 */
+}  
+@keyframes move {
+    0% {
+        transform: translateY(0) scale(0.06);  /* 初始位置，保持缩放 */
+    }
+    25% {
+        transform: translateY(-4vm) scale(0.06);  /* 左移 */
+    }
+    50% {
+        transform: translateY(4vw) scale(0.06);  /* 右移 */
+    }
+    75% {
+        transform: translateY(-4vm) scale(0.06);  /* 左移 */
+    }
+    100% {
+        transform: translateY(0) scale(0.06);  /* 恢复到初始位置 */
+    }
+}
+.page3 h1{
+    font-family: "American Typewriter";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: opacity 2s ease;
+}
+.page3 h1 .big{
+    color: #1E61FF;
+    font-size: 6vw;
+}
+.page3 h1 .small{
+    color: #ffffff;
+    font-size: 3vw;
+}
+.page3 h2{
+    color: #ffffff;
+    font-size: 2vw;
+    font-family: "American Typewriter";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 95%;
+    left: 70%;
+    z-index: 2;
+    transition: opacity 4s ease;
+}
+.page3 p{
+    font-family: "Poppins";
+    font-style: normal;
+    position: absolute;
+    z-index: 2;
+}
+.page3 p:nth-child(5){
+    color: #ffffff;
+    font-size: 2vw;
+    font-weight: 500;
+    top: 32%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.page3 p:nth-child(6){
+    color: #ffffff;
+    font-size: 1vw;
+    font-weight: 500;
+    top: 39%;
+    left: 50%;
+    transform: translateX(-50%)
+    
+}
+.page3 p:nth-child(7){
+    color: #ffffff;
+    font-size: 1.3vw;
+    font-weight: 500;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.page3 a{
+    position: absolute; 
+    color: #1E61FF;
+    font-family: Poppins;
+    font-size: 1.3vw;
+    font-weight: 500;
+    top: 60%;
+    left: 80%;
+    white-space: nowrap;  /* 防止文字换行 */
+    text-decoration: none;  /* 去除默认下划线 */
+    z-index: 200;
+}
+.page3 a:hover {
+    color: #1E61FF;  /* 悬停时的颜色 */
+    text-decoration: underline;  /* 添加下划线 */
+}
+.page3 img:nth-child(9){
+    top: -65%;
+    left: -30%;
+    transform: scale(0.06);
+    z-index: 1;
+    animation: scale 2.5s infinite; /* 添加动画 */
+}  
+@keyframes scale {
+    0% {
+        transform: scale(0.04);  /* 初始位置，保持缩放 */
+    }
+    50% {
+        transform: scale(0.06);  /* 右移 */
+    }
+    100% {
+        transform: scale(0.04);  /* 恢复到初始位置 */
+    }
+}
+.torn-paper {
+    transition: opacity 1s ease; /* 平滑过渡效果 */
+}
+
+.torn-paper:hover {
+    opacity: 0.2; /* 鼠标悬停时变暗 */
+}
+/* 隐藏文本 */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0.5s; /* 延迟 visibility 的切换 */
+}
+.hidden:hover{
+    opacity: 1;
+    visibility: visible
+}
+
+/* 当鼠标悬停在 .torn-paper 上时，显示文本 */
+.torn-paper:hover ~ .hidden {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* 立即切换 visibility */
+}
+.page4{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page4 img{
+    position: absolute;
+    width: 100%;
+}
+.page4 img:nth-child(1){
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+}        
+.page4 img:nth-child(2){
+    top: -40%;
+    left: -27%;
+    transform: scale(0.1);
+    animation: rotate-animation 0.5s infinite alternate; /* 动画设置：3秒一次，来回旋转 */
+}       
+.page4 img:nth-child(3){
+    top: 0%;
+    left: 20%;
+    transform: scale(0.1);
+    animation: rotate-animation 0.5s infinite alternate; 
+}    
+.page4 img:nth-child(4){
+    top: -3%;
+    left: -20%;
+    transform: scale(0.1);
+    animation: rotate-animation 0.5s infinite alternate; 
+}    
+@keyframes rotate-animation {
+        0% {
+            transform: rotate(0deg) scale(0.1); /* 初始状态 */
+        }
+        100% {
+            transform: rotate(30deg) scale(0.1); 
+        }
+    }
+.page5{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page5 img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;  
+}
+.page5 img:nth-child(1){
+    top: 50%; /* 垂直居中 */
+    transform: translate(-50%, -50%); /* 水平和垂直居中 */
+    z-index: 1;
+}   
+.page5 h1{
+    font-family: "American Typewriter";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    white-space: nowrap;  /* 防止文字换行 */
+    transition: opacity 3s ease;
+}
+.page5 h1 .big{
+    color: #1E61FF;
+    font-size: 6vw;
+}
+.page5 h1 .small{
+    color: #ffffff;
+    font-size: 3vw;
+}
+.page5 p{
+    font-family: "Poppins";
+    font-style: normal;
+    position: absolute;
+    z-index: 2;
+}
+.page5 p:nth-child(3){
+    color: #ffffff;
+    font-size: 2vw;
+    font-weight: 500;
+    top: 32%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.page5 p:nth-child(4){
+    color: #ffffff;
+    font-size: 1vw;
+    font-weight: 500;
+    top: 39%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.page5 p:nth-child(5){
+    color: #ffffff;
+    font-size: 1.3vw;
+    font-weight: 500;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.page5 a{
+    position: absolute; 
+    color: #1E61FF;
+    font-family: Poppins;
+    font-size: 1.3vw;
+    font-weight: 500;
+    top: 60%;
+    left: 80%;
+    white-space: nowrap;  /* 防止文字换行 */
+    text-decoration: none;  /* 去除默认下划线 */
+    z-index: 200;
+}
+.page5 a:hover {
+    color: #1E61FF;  /* 悬停时的颜色 */
+    text-decoration: underline;  /* 添加下划线 */
+}
+.page5 img:nth-child(7){
+    top: -97%;
+    left: 10%;
+    transform: scale(0.06);
+    z-index: 1;
+    animation: flash 2s infinite; /* 添加动画 */
+}  
+@keyframes flash {
+    0% {
+        transform: translateY(0) scale(0.06); 
+    }
+    50% {
+        transform: translateY(2vw) scale(0.06);  
+    }
+    100% {
+        transform: translateY(0) scale(0.06);  
+    }
+}
+.page5 img:nth-child(8){
+    top: -60%;
+    left: -38%;
+    transform: scale(0.06);
+    z-index: 1;
+    animation: spider 2s infinite; /* 添加动画 */
+}  
+@keyframes spider {
+    0% {
+        transform: scale(0.06); 
+    }
+    50% {
+        transform: scale(0.04);  
+    }
+    100% {
+        transform: scale(0.06);  
+    }
+}
+
+.page6{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}   
+.page6 h1{
+    position: absolute;
+    font-family: "American Typewriter";
+    font-style: normal;
+    font-weight: 700;
+    z-index: 2;
+}
+.page6 h1:nth-child(1){
+    color: #1E61FF;
+    font-size: 6vw;
+    top: 10%; 
+    left: 60%;
+    white-space: nowrap;  /* 防止文字换行 */
+    transition: opacity 2s ease;
+}       
+.page6 h1:nth-child(2){
+    color: #ffffff;
+    font-size: 2vw;
+    top: 45%; 
+    left: 3%;
+    transition: opacity 2s ease;
+} 
+.page6 h1:nth-child(3){
+    color: #ffffff;
+    font-size: 2.5vw;
+    top: 90%; 
+    left: 50%;
+    white-space: nowrap;  /* 防止文字换行 */
+    transition: opacity 2s ease;
+}
+.page6 img{
+    position: absolute;
+    width: 100%;
+}
+.page6 img:nth-child(4){
+    top: -70%;
+    left: 3%;
+    transform: scale(0.1);
+}    
+.page6 img:nth-child(5){
+    top: -50%;
+    left: 18%;
+    transform: scale(0.15);
+}    
+.page6 img:nth-child(6){
+    top: -10%;
+    left: -30%;
+    transform: scale(0.1);
+    animation: awkward 2s infinite alternate; 
+}    
+@keyframes awkward {
+        0% {
+            transform: scale(0.1); /* 初始状态 */
+        }
+        50% {
+            transform: scale(0.14); 
+        }
+        100% {
+            transform: scale(0.1); 
+        }
+    }
+.page7{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page7 img{
+    position: absolute;
+    width: 100%;
+}
+.page7 img:nth-child(1){
+    top: -21%;
+    left: 19%;
+    transform: scale(0.1);
+    z-index: 1;
+}        
+.page7 img:nth-child(2){
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4); 
+    z-index: 1;
+}        
+.page7 img:nth-child(3){
+    top: 40%; 
+    left: 8%;
+    transform: scale(0.15); 
+    z-index: 1;
+}       
+.page7 h1{
+    position: absolute;
+    color: #000000;
+    font-family: "American Typewriter";
+    font-style: normal;
+    font-weight: 700;
+    z-index: 2;
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.page7 h1:nth-child(4){
+    font-size: 5vw;
+    top: 21%; 
+    left: 67%;
+}       
+.page7 h1:nth-child(5){
+    font-size: 6vw;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+    transition: opacity 2s ease;
+}
+.page7 h1:nth-child(6){
+    font-size: 2.8vw;
+    top: 76%; 
+    left: 52%;
+} 
+.page7 img:nth-child(7){
+    top: -65%;
+    left: -30%;
+    transform: scale(0.1);
+    z-index: 2;
+    animation: think 4s infinite; /* 添加动画 */
+}   
+@keyframes think {
+    0% {
+        transform: translateX(0) scale(0.1);  /* 初始位置，保持缩放 */
+    }
+    25% {
+        transform: translateX(-5vm) scale(0.1);  /* 左移 */
+    }
+    50% {
+        transform: translateX(5vw) scale(0.1);  /* 右移 */
+    }
+    75% {
+        transform: translateX(-5vm) scale(0.1);  /* 左移 */
+    }
+    100% {
+        transform: translateX(0) scale(0.1);  /* 恢复到初始位置 */
+    }
+}
+.page8{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}   
+.page8 h1{
+    position: absolute;
+    font-family: "American Typewriter";
+    font-style: normal;
+    font-weight: 700;
+    z-index: 2;
+}
+.page8 h1:nth-child(1){
+    color: #ffffff;
+    font-size: 2.5vw;
+    top: 25%; 
+    left: 10%;
+    white-space: nowrap;
+    transition: opacity 2s ease;
+} 
+.page8 h1:nth-child(2){
+    color: #ffffff;
+    font-size: 2.5vw;
+    top: 55%; 
+    left: 50%;
+    white-space: nowrap;  /* 防止文字换行 */
+    transition: opacity 2s ease;
+}
+.page8 img{
+    position: absolute;
+    width: 100%;
+}
+.page8 img:nth-child(3){
+    top: -15%;
+    left: -10%;
+    transform: scale(0.1);
+}    
+.page8 img:nth-child(4){
+    top: -110%;
+    left: 0%;
+    transform: scale(0.05);
+}   
+.page8 img:nth-child(5){
+    top: 5%;
+    left: -20%;
+    transform: scale(0.1);
+}  
+.page8 img:nth-child(6){
+    top: -28%;
+    left: 18%;
+    transform: scale(0.1);
+}  
+.page8 img:nth-child(7){
+    top: -30%;
+    left: -30%;
+    transform: scale(0.1);
+}  
+.page8 img:nth-child(8){
+    top: 22%;
+    left: 15%;
+    transform: scale(0.2);
+    z-index: 10;
+    animation: smile 2s infinite alternate; 
+}    
+@keyframes smile {
+        0% {
+            transform: scale(0.2); /* 初始状态 */
+        }
+        50% {
+            transform: scale(0.24); 
+        }
+        100% {
+            transform: scale(0.2); 
+        }
+    }
+.page9{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page9 img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;  
+}
+.page9 img:nth-child(1){
+    top: 50%; /* 垂直居中 */
+    transform: translate(-50%, -50%); /* 水平和垂直居中 */
+    z-index: 1;
+}   
+.page9 h1{
+    color: #1E61FF;
+    font-size: 6vw;
+    font-family: "American Typewriter";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    white-space: nowrap;  /* 防止文字换行 */
+    transition: opacity 3s ease;
+}
+.page9 p{
+    font-family: "Poppins";
+    font-style: normal;
+    position: absolute;
+    z-index: 2;
+}
+.page9 p:nth-child(3){
+    color: #ffffff;
+    font-size: 2vw;
+    font-weight: 500;
+    top: 32%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.page9 p:nth-child(4){
+    color: #ffffff;
+    font-size: 1vw;
+    font-weight: 500;
+    top: 39%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.page9 p:nth-child(5){
+    color: #ffffff;
+    font-size: 1.3vw;
+    font-weight: 500;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.page9 a{
+    position: absolute; 
+    color: #1E61FF;
+    font-family: Poppins;
+    font-size: 1.3vw;
+    font-weight: 500;
+    top: 60%;
+    left: 80%;
+    white-space: nowrap;  /* 防止文字换行 */
+    text-decoration: none;  /* 去除默认下划线 */
+    z-index: 200;
+}
+.page9 a:hover {
+    color: #1E61FF;  /* 悬停时的颜色 */
+    text-decoration: underline;  /* 添加下划线 */
+}
+.page9 img:nth-child(7){
+    top: 34%;
+    left: -30%;
+    transform: scale(0.15);
+    z-index: 1;
+}  
+
+.page10{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page10 img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;  
+}
+.page10 img:nth-child(1){
+    top: 50%; /* 垂直居中 */
+    transform: translate(-50%, -50%); /* 水平和垂直居中 */
+    z-index: 1;
+}   
+.page10 h1{
+    color: #1E61FF;
+    font-size: 6vw;
+    font-family: "American Typewriter";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    white-space: nowrap;  /* 防止文字换行 */
+    transition: opacity 3s ease;
+}
+.page10 p{
+    font-family: "Poppins";
+    font-style: normal;
+    position: absolute;
+    z-index: 2;
+}
+.page10 p:nth-child(3){
+    color: #ffffff;
+    font-size: 2vw;
+    font-weight: 500;
+    top: 32%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.page10 p:nth-child(4){
+    color: #ffffff;
+    font-size: 1vw;
+    font-weight: 500;
+    top: 39%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.page10 p:nth-child(5){
+    color: #ffffff;
+    font-size: 1.3vw;
+    font-weight: 500;
+    top: 47%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.page10 a{
+    position: absolute; 
+    color: #1E61FF;
+    font-family: Poppins;
+    font-size: 1.3vw;
+    font-weight: 500;
+    top: 60%;
+    left: 80%;
+    white-space: nowrap;  /* 防止文字换行 */
+    text-decoration: none;  /* 去除默认下划线 */
+    z-index: 200;
+}
+.page10 a:hover {
+    color: #1E61FF;  /* 悬停时的颜色 */
+    text-decoration: underline;  /* 添加下划线 */
+}
+.page10 img:nth-child(7){
+    top: 10%;
+    left: 40%;
+    transform: scale(0.15);
+    z-index: 1;
+}  
+
+.page11{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}   
+.page11 h1{
+    position: absolute;
+    font-family: "American Typewriter";
+    font-style: normal;
+    font-weight: 700;
+    z-index: 2;
+}
+.page11 h1:nth-child(1){
+    color: #1E61FF;
+    font-size: 6vw;
+    top: 10%; 
+    left: 70%;
+    white-space: nowrap;  /* 防止文字换行 */
+    transition: opacity 2s ease;
+}       
+.page11 h1:nth-child(2){
+    color: #ffffff;
+    font-size: 2.5vw;
+    top: 37%; 
+    left: 10%;
+    transition: opacity 2s ease;
+} 
+.page11 h1:nth-child(3){
+    color: #ffffff;
+    font-size: 2.5vw;
+    top: 80%; 
+    left: 50%;
+    white-space: nowrap;  /* 防止文字换行 */
+    transition: opacity 2s ease;
+}
+.page11 img{
+    position: absolute;
+    width: 100%;
+}
+.page11 img:nth-child(4){
+    top: 20%;
+    left: -20%;
+    transform: scale(0.2);
+    z-index: 1000;
+}    
+.page11 img:nth-child(5){
+    top: 20%;
+    left: 20%;
+    transform: scale(0.2);
+    z-index: 100;
+}    
+.page12{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}   
+.page12 h1{
+    position: absolute;
+    font-family: "American Typewriter";
+    font-style: normal;
+    font-weight: 700;
+    z-index: 2;
+}   
+.page12 h1:nth-child(1){
+    color: #ffffff;
+    font-size: 2.5vw;
+    top: 26%; 
+    left: 10%;
+    transition: opacity 2s ease;
+} 
+.page12 h1:nth-child(2){
+    color: #ffffff;
+    font-size: 4vw;
+    top: 80%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    white-space: nowrap;  /* 防止文字换行 */
+    transition: opacity 2s ease;
+}
+.page12 img{
+    position: absolute;
+    width: 100%;
+}
+.page12 img:nth-child(3){
+    top: -18%;
+    left: 0%;
+    transform: scale(0.2);
+    z-index: 1000;
+    animation: circle 3s infinite linear; 
+}    
+@keyframes circle {
+        0% {
+            transform: rotate(0deg) scale(0.2); /* 初始状态 */
+        }
+        100% {
+            transform: rotate(360deg) scale(0.2); 
+        }
+    }
+.page13{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page13 h1{
+    position: absolute;
+    color: #1E61FF;
+    font-family: "American Typewriter";
+    font-size: 9vw;
+    font-style: normal;
+    font-weight: 700;
+    top: 8%;              /* 垂直居中 */
+    left: 50%;             /* 水平居中 */
+    transform: translate(-50%); 
+    z-index: 3;
+    white-space: nowrap;  /* 防止文字换行 */
+    transition: opacity 2s ease;
+}
+.page13 img{
+    position: absolute;         
+    width: 100%;
+    
+}
+.page13 img:nth-child(2){
+    top: 48%; 
+    left: 50%;
+    transform: translate(-50%, -52%) scale(0.25);
+    z-index: 1;
+    animation: portrait 3s infinite; 
+}
+@keyframes portrait {
+    0% {
+        transform: translate(-50%, -52%) scale(0.25); 
+    }
+    50% {
+        transform: translate(-50%, -52%) scale(0.27); 
+    }
+    100% {
+        transform: translate(-50%, -52%) scale(0.25); 
+    }
+}
+.page13 img:nth-child(3){
+    bottom: 0;
+    z-index: 1;
+}
+.page13 img:nth-child(4){
+    top: -59%;
+    left: 10%;
+    transform: scale(0.06);
+    z-index: 1000;
+}    
+.page13 img:nth-child(5){
+    top: -36%;
+    left: 30%;
+    transform: scale(0.06);
+    z-index: 1000;
+}    
+.page13 img:nth-child(6){
+    top: -50%;
+    left: -30%;
+    transform: scale(0.06);
+    z-index: 1000;
+}    

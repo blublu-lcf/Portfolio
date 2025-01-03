@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+@font-face {
+    font-family: 'American Typewriter'; 
+    src: url('/assets/fonts/americantypewriterbold.ttf') format('truetype'); 
+}
+.navbar{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.76);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    z-index: 1001;
+    display: flex;            /* 使用 Flexbox 来排列项目 */
+    justify-content: flex-start;  /* 水平居中 */
+    align-items: center;      /* 垂直居中 */
+
+    justify-content: space-between; /* 在父容器中均匀分布导航项 */
+    padding: 0 2vw; /* 给两边添加一些内边距 */
+}
+.navbar a {
+    text-decoration: none !important;  /* 确保所有链接没有下划线 */
+}
+.nav-item {
+    color: white;             
+    font-size: 1.3vw;          
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;       /* 文字居中对齐 */
+    padding: 14px 20px;       /* 添加内边距，使点击区域更大 */
+    cursor: pointer;         /* 鼠标悬停时显示手指 */   
+    position: absolute; /* 为了可以定位矩形框 */
+    white-space: nowrap;
+}
+.nav-item:hover {
+    color: #4484E5;             /* 鼠标悬停时改变文字颜色 */
+}
+
+.nav-item:nth-child(1){
+    left: 2%;
+}
+.nav-item:nth-child(2){
+    left: 53%;
+}
+.nav-item:nth-child(3){
+    left: 70%;
+}
+.nav-item:nth-child(4){
+    left: 78%;
+}
+.nav-item:nth-child(5){
+    left: 86%;
+}
+.nav-item.active {
+    background-color: #2B2B2B;
+    /* border: 2px solid #1E61FF; 设置矩形框 */
+    border-radius: 24.5px; /* 可选：使框角变圆 */
+    padding: 8px 20px; /* 调整内边距，避免框太大 */
+}
+.page1{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page1 h1{
+    position: absolute;
+    color: #4484E5;
+    font-family: "American Typewriter";
+    font-size: 10vw;
+    font-style: normal;
+    font-weight: 700;
+    top: 50%;              /* 垂直居中 */
+    left: 50%;             /* 水平居中 */
+    transform: translate(-50%, -50%); /* 平移50%以确保完全居中 */
+    z-index: 3;
+    white-space: nowrap;  /* 防止文字换行 */
+}
+.page1 img{
+    position: absolute;
+    top: 50%;              /* 垂直居中 */
+    left: 50%;             /* 水平居中 */
+    transform: translate(-50%, -50%); /* 平移50%以确保完全居中 */
+    width: 100%;
+    
+}
+.page1 img:nth-child(1){
+    z-index: 1;
+}
+.page2{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page2 img{
+    position: absolute;
+    top: -30%;              
+    left: 20%;         
+    transform: scale(0.5);   
+    width: 100%;
+}
+.page2 h1 {
+    position: absolute;
+    font-family: Poppins;
+    margin-left: 10vw;
+}
+.page2 h1:nth-child(2) {
+    top: 0%;
+    left: 0%;
+    font-size: 36px;
+    color: #4484E5; /* 红色 */
+
+}
+.page2 h1:nth-child(3) {
+    top: 6%;
+    left: 0%;
+    font-size: 20px;
+    font-weight: 100;
+    color: #ffffff; /* 橙色 */
+}
+.page2 h1:nth-child(4) {
+    top: 11%;
+    left: 0%;
+    font-size: 28px;
+    font-weight: 600;
+    color: #4484E5; /* 绿色 */
+}
+.page2 h1:nth-child(5) {
+    top: 16%;
+    left: 0%;
+    font-size: 20px;
+    font-weight: 100;
+    color: #ffffff; /* 橙色 */
+}
+.page2 h1:nth-child(6) {
+    top: 21%;
+    left: 0%;
+    font-size: 20px;
+    font-weight: 100;
+    color: #ffffff; /* 橙色 */
+}
+.page2 h1:nth-child(7) {
+    top: 26%;
+    left: 0%;
+    font-size: 20px;
+    font-weight: 100;
+    color: #ffffff; /* 橙色 */
+}
+.page2 a{
+    position: absolute;
+    font-family: Poppins;
+    margin-left: 10vw;
+    top: 31%;
+    left: 0%;
+    font-size: 18px;
+    font-weight: 100;
+    color: #4484E5; /* 橙色 */
+}
+
+.page4{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/5;
+}
+.page4 img{
+    position: absolute;
+    top: 0%;              
+    left: 50%;         
+    transform: translate(-50%,-100%);
+    width: 100%;
+}
+
+.explore-more {
+    font-family: Poppins;
+    font-size: 18px;
+    color: #4484E5;  /* 设置文本颜色 */
+    text-decoration: none;  /* 去除默认下划线 */
+    margin-left: 10vw;
+    transition: color 0.3s ease;
+}
+.explore-more:hover {
+    color: #3d618a;  /* 鼠标悬停时改变颜色 */
+}

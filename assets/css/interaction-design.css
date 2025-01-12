@@ -180,11 +180,18 @@
     font-weight: 100;
     color: #ffffff; /* 橙色 */
 }
+.page2 h1:nth-child(12) {
+    top: 51%;
+    left: 0%;
+    font-size: 20px;
+    font-weight: 100;
+    color: #ffffff; /* 橙色 */
+}
 .page2 a{
     position: absolute;
     font-family: Poppins;
     margin-left: 10vw;
-    top: 51%;
+    top: 56%;
     left: 0%;
     font-size: 18px;
     font-weight: 100;
@@ -266,18 +273,11 @@
     font-weight: 100;
     color: #ffffff; /* 橙色 */
 }
-.page3 h1:nth-child(10) {
-    top: 17%;
-    left: 0%;
-    font-size: 20px;
-    font-weight: 100;
-    color: #ffffff; /* 橙色 */
-}
 .page3 a{
     position: absolute;
     font-family: Poppins;
     margin-left: 10vw;
-    top: 22%;
+    top: 17%;
     left: 0%;
     font-size: 18px;
     font-weight: 100;

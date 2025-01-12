@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+@font-face {
+    font-family: 'American Typewriter'; 
+    src: url('../fonts/americantypewriterbold.ttf') format('truetype'); 
+}
+.navbar{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.76);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    z-index: 1001;
+    display: flex;            /* 使用 Flexbox 来排列项目 */
+    justify-content: flex-start;  /* 水平居中 */
+    align-items: center;      /* 垂直居中 */
+
+    justify-content: space-between; /* 在父容器中均匀分布导航项 */
+    padding: 0 2vw; /* 给两边添加一些内边距 */
+}
+.navbar a {
+    text-decoration: none !important;  /* 确保所有链接没有下划线 */
+}
+.nav-item {
+    color: white;             
+    font-size: 1.3vw;          
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;       /* 文字居中对齐 */
+    padding: 14px 20px;       /* 添加内边距，使点击区域更大 */
+    cursor: pointer;         /* 鼠标悬停时显示手指 */   
+    position: absolute; /* 为了可以定位矩形框 */
+    white-space: nowrap;
+}
+.nav-item:hover {
+    color: #7BBDCC;             /* 鼠标悬停时改变文字颜色 */
+}
+
+.nav-item:nth-child(1){
+    left: 2%;
+}
+.nav-item:nth-child(2){
+    left: 53%;
+}
+.nav-item:nth-child(3){
+    left: 70%;
+}
+.nav-item:nth-child(4){
+    left: 78%;
+}
+.nav-item:nth-child(5){
+    left: 86%;
+}
+.nav-item.active {
+    background-color: #2B2B2B;
+    /* border: 2px solid #1E61FF; 设置矩形框 */
+    border-radius: 24.5px; /* 可选：使框角变圆 */
+    padding: 8px 20px; /* 调整内边距，避免框太大 */
+}
+.page1{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.page1 img{
+    position: absolute;
+    top: 50%;              /* 垂直居中 */
+    left: 50%;             /* 水平居中 */
+    transform: translate(-50%, -50%); /* 平移50%以确保完全居中 */
+    width: 100%;
+    z-index: 1;
+}
+.Introduction{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.Introduction h1{
+    position: absolute;
+    font-family: "Poppins";
+    font-style: normal;
+    z-index: 2;
+    /* white-space: nowrap;  */
+}
+.Introduction h1:nth-child(1){
+    color: #FD4352;
+    font-weight: 700;
+    font-size: 2vw;
+    top: 0%; 
+    left: 50%;
+    transform: translateX(-50%);
+}    
+.Introduction h1:nth-child(2){
+    font-weight: 500;
+    font-size: 1.5vw;
+    top: 10%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%; /* 限制宽度 */
+}    
+.Introduction h1:nth-child(2) .white{
+    color: #ffffff;
+}    
+.Introduction h1:nth-child(2) .highlight{
+    color: #72D4B6;
+}    
+.Experience{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1080;
+}
+.Experience h1{
+    position: absolute;
+    font-family: "Poppins";
+    font-style: normal;
+    z-index: 1200;
+}
+.Experience h1:nth-child(1){
+    color: #FD4352;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 700;
+    font-size: 2vw;
+    top: -55%; 
+}    
+.Experience img{
+    position: absolute; 
+    width: 100%;
+}
+.Experience img:nth-child(2){
+    top: -55%;              
+    left: 50%;
+    transform: translateX(-50%) scale(0.7);
+    z-index: 1000;
+}
+.Experience h1:nth-child(3){
+    color: #72D4B6;
+    font-style: italic;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+    font-size: 2.5vw;
+    top: 40%; 
+    text-align: center;
+    white-space: nowrap; 
+}    
+.Bottom{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1920/1;
+}
+.Bottom img{
+    position: absolute;
+    top: 100%;              
+    left: 50%;         
+    transform: translate(-50%,-60%);
+    width: 100%;
+}
